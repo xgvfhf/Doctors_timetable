@@ -58,6 +58,7 @@
     <Compile Include="ChooseDay.Designer.cs">
       <DependentUpon>ChooseDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Day.cs" />
     <Compile Include="Week.cs" />
     <Compile Include="FillPatientsDiagnosis.cs">
       <SubType>Form</SubType>
