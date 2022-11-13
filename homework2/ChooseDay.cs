@@ -17,10 +17,17 @@ namespace homework2
             InitializeComponent();
         }
 
-        private void ChooseDay_Click(object sender, EventArgs e)
+      
+
+        private void ChooseDay_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            Form1 frm = new Form1() {WhatDay = btn.Text };
+            Form1 frm = new Form1() { WhatDay = btn.Text };
             frm.Show();
         }
     }

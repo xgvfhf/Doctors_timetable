@@ -45,7 +45,7 @@ namespace homework2
             this.button1.TabIndex = 0;
             this.button1.Text = "14.11";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -55,7 +55,7 @@ namespace homework2
             this.button2.TabIndex = 1;
             this.button2.Text = "15.11";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -65,7 +65,7 @@ namespace homework2
             this.button3.TabIndex = 2;
             this.button3.Text = "16.11";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -75,7 +75,7 @@ namespace homework2
             this.button4.TabIndex = 3;
             this.button4.Text = "17.11";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.button4.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -85,7 +85,7 @@ namespace homework2
             this.button5.TabIndex = 4;
             this.button5.Text = "18.11";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -109,7 +109,7 @@ namespace homework2
             this.Controls.Add(this.button1);
             this.Name = "ChooseDay";
             this.Text = "ChooseDay";
-            this.Click += new System.EventHandler(this.ChooseDay_Click);
+            this.Load += new System.EventHandler(this.ChooseDay_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

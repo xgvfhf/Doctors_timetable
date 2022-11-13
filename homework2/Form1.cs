@@ -15,6 +15,8 @@ namespace homework2
     public partial class Form1 : Form
     {
         public string WhatDay { get; set; }
+        public Interval CurrentDay { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -23,46 +25,9 @@ namespace homework2
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = WhatDay;
-            //var con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Проекти VS\homework2\homework2\PatientList.accdb");
-            
-            
-            //string query = "SELECT * FROM PatientList";
-            //con.Open();
-            
-            //OleDbCommand command = new OleDbCommand(query,con);
-            //var reader = command.ExecuteReader();
-            //var intr = new Interval();
-            //var cur = intr;
-            //int Counter = 0;
-            //int p = 0;
-            //while (reader.Read())
-            //{
-            //    if (p>=0 && p<4)
-            //    {
-            //        intr.pt.Enqueue(new Patient { FirstName = reader[1].ToString(), LastName = reader[2].ToString(), TypeOfPatient = "Planned" });
-            //        p++;
-            //    }
-            //    // скорее всего нужно реализовать класс типо линкт лист
-            //    else
-            //    {
-                  
-            //        if (Counter==4)
-            //        {
-            //            cur.Next = new Interval();
-            //            cur = cur.Next;
-            //        }
-            //        cur.pt.Enqueue(new Patient { FirstName = reader[1].ToString(), LastName = reader[2].ToString(), TypeOfPatient = "Planned" });
-                    
-            //    }
+            var day = new Day();
+            CurrentDay = day.TableToQueue();//если че удалим
 
-            //    Counter++;
-
-            //} 
-        
-            
-
-            
-           
         }
 
 
@@ -72,6 +37,7 @@ namespace homework2
         {
             var btn = sender as Button;
             string choice = btn.Text;
+            
             switch (choice)
             {
                 case "Fill diagnosis":

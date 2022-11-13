@@ -40,6 +40,7 @@ namespace homework2
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -104,9 +105,9 @@ namespace homework2
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(77, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Date of visit:";
+            this.label3.Text = "ID number:";
             // 
             // label4
             // 
@@ -134,12 +135,23 @@ namespace homework2
             this.button1.TabIndex = 10;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 423);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "ID:";
             // 
             // AddAdditionalPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 469);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -171,5 +183,6 @@ namespace homework2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
     }
 }
