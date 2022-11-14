@@ -26,12 +26,38 @@ namespace homework2
         {
             this.Text = WhatDay;
             var day = new Day();
-            CurrentDay = day.FillTheQueue();//если че удалим
+            CurrentDay = day.FillTheQueue();
+            
+            var con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Проекти VS\homework2\homework2\PatientList.accdb");
+            con.Open();
+            var temp = CurrentDay;
+            string query = "DELETE FROM OrderedList";
+            OleDbCommand command2 = new OleDbCommand(query, con);
+            command2.ExecuteNonQuery();
+
+            while (temp.Next != null)
+            {               
+                foreach (var patient in temp.pt)
+                {
+                    //patient.Id = new Random().Next(10000,99999).ToString();
+                    string query1 = $"INSERT INTO OrderedList(DateOfVisit,PatientName,PatientSurname,Type,PersonalNumber,Symptoms,Diagnosis)VALUES('{patient.Date}','{patient.FirstName}','{patient.LastName}','{patient.TypeOfPatient}','{patient.Id}','{patient.Symptom}','{patient.Diagnosises}')";
+                    OleDbCommand command = new OleDbCommand(query1,con);
+                    
+                    command.ExecuteNonQuery();
+                }
+                temp = temp.Next;
+               
+            }
+            string query2 = "SELECT DateOfVisit,PatientName,PatientSurname,Type,Symptoms,Diagnosis FROM OrderedList ";
+            OleDbCommand command1 = new OleDbCommand(query2, con);
+            OleDbDataAdapter ol = new OleDbDataAdapter(command1);
+            DataTable dataTable = new DataTable();
+            ol.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+           
+            
 
         }
-
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
