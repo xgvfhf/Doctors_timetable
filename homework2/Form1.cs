@@ -26,7 +26,7 @@ namespace homework2
         {
             this.Text = WhatDay;
             var day = new Day();
-            CurrentDay = day.TableToQueue();//если че удалим
+            CurrentDay = day.FillTheQueue();//если че удалим
 
         }
 
