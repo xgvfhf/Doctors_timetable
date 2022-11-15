@@ -49,7 +49,7 @@ namespace homework2
                     if (temp.pt.Count >= 0 && temp.pt.Count < 4)
                         type = "planned";
                     else
-                        type = "unplanned";
+                        type = "Unplanned";
 
                     temp.pt.Enqueue(new Patient { FirstName = "-", LastName = "-", TypeOfPatient = type, Date = dtm.ToShortTimeString(), Id = "-", Symptom = "-", Diagnosises = "-" });
                     dtm = dtm.AddMinutes(30);

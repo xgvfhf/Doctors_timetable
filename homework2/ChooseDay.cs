@@ -27,7 +27,7 @@ namespace homework2
         private void button1_Click(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            Form1 frm = new Form1() { WhatDay = btn.Text };
+            Form1 frm = new Form1() { WhatDay = btn.Name };
             frm.Show();
         }
     }

@@ -111,6 +111,7 @@ namespace homework2
             this.Controls.Add(this.textBox1);
             this.Name = "AddAdditionalPatient";
             this.Text = "AddAdditionalPatient";
+            this.Load += new System.EventHandler(this.AddAdditionalPatient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
