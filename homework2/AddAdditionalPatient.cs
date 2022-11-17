@@ -61,18 +61,23 @@ namespace homework2
             }
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char l = e.KeyChar;
-            if ((l < 'A' || l > 'z') && l != '\b' )// only latin letters
-            {
-                e.Handled = true;
-            }
-        }
+       
 
         private void AddAdditionalPatient_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z')  || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

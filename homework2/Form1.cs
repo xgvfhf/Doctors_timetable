@@ -72,6 +72,7 @@ namespace homework2
             {
                 case "Fill diagnosis":
                     var fill = new FillPatientsDiagnosis();
+                    fill.WhatDay = Text;
                     fill.Owner = this;
                     fill.Show();                    
                     break;
@@ -82,6 +83,7 @@ namespace homework2
                     break;
                 case "Show results":
                     var result = new Results();
+                    result.WhatDay = Text;
                     result.Owner = this;
                     result.Show();                    
                     break;

@@ -118,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
